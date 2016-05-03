@@ -34,22 +34,22 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Exercise> exercises = Arrays.asList(
             // ascending and descending
-            new Exercise("C G C", new Scale(new int[]{0, cnote(Pitch.G0), 0})),
-            new Exercise("C E G E C", new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.G0), cnote(Pitch.E0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.G0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.G0), cnote(Pitch.E0), 0})),
             // there is also a version of the below one where the note is held
-            new Exercise("C E F G F E C", new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), 0})),
-            new Exercise("C E F G G G G F E C", new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), 0})),
-            new Exercise("C D E F G F E D C", new Scale(new int[]{0, cnote(Pitch.D0), cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), cnote(Pitch.D0), 0})),
-            new Exercise("C E G C E G F D B G F D C", new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.G0), cnote(Pitch.C1), cnote(Pitch.E1), cnote(Pitch.G1), cnote(Pitch.F1), cnote(Pitch.D1), cnote(Pitch.B0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.D0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.D0), cnote(Pitch.E0), cnote(Pitch.F0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.E0), cnote(Pitch.D0), 0})),
+            new Exercise(new Scale(new int[]{0, cnote(Pitch.E0), cnote(Pitch.G0), cnote(Pitch.C1), cnote(Pitch.E1), cnote(Pitch.G1), cnote(Pitch.F1), cnote(Pitch.D1), cnote(Pitch.B0), cnote(Pitch.G0), cnote(Pitch.F0), cnote(Pitch.D0), 0})),
 
             // descending
-            new Exercise("C A F", new Scale(new int[]{interval(Pitch.F0, Pitch.C1), interval(Pitch.F0, Pitch.A0), 0})),
-            new Exercise("D C B A G", new Scale(new int[]{interval(Pitch.G0, Pitch.D1), interval(Pitch.G0, Pitch.C1),interval(Pitch.G0, Pitch.B0),interval(Pitch.G0, Pitch.A0), 0}))
+            new Exercise(new Scale(new int[]{interval(Pitch.F0, Pitch.C1), interval(Pitch.F0, Pitch.A0), 0})),
+            new Exercise(new Scale(new int[]{interval(Pitch.G0, Pitch.D1), interval(Pitch.G0, Pitch.C1),interval(Pitch.G0, Pitch.B0),interval(Pitch.G0, Pitch.A0), 0}))
             );
-    private List<Pitch> roots = Arrays.asList(Pitch.C2, Pitch.CSharp2, Pitch.D2, Pitch.DSharp2, Pitch.E2, Pitch.F2, Pitch.FSharp2, Pitch.G2, Pitch.GSharp2, Pitch.A2, Pitch.Asharp2, Pitch.B2, Pitch.BSharp2,
-            Pitch.C3, Pitch.CSharp3, Pitch.D3, Pitch.DSharp3, Pitch.E3, Pitch.F3, Pitch.FSharp3, Pitch.G3, Pitch.GSharp3, Pitch.A3, Pitch.Asharp3, Pitch.B3, Pitch.BSharp3,
-            Pitch.C4, Pitch.CSharp4, Pitch.D4, Pitch.DSharp4, Pitch.E4, Pitch.F4, Pitch.FSharp4, Pitch.G4, Pitch.GSharp4, Pitch.A4, Pitch.Asharp4, Pitch.B4, Pitch.BSharp4,
-            Pitch.C5, Pitch.CSharp5, Pitch.D5, Pitch.DSharp5, Pitch.E5, Pitch.F5, Pitch.FSharp5, Pitch.G5, Pitch.GSharp5, Pitch.A5, Pitch.Asharp5, Pitch.B5, Pitch.BSharp5);
+    private List<Pitch> roots = Arrays.asList(Pitch.C2, Pitch.CSharp2, Pitch.D2, Pitch.DSharp2, Pitch.E2, Pitch.F2, Pitch.FSharp2, Pitch.G2, Pitch.GSharp2, Pitch.A2, Pitch.Asharp2, Pitch.B2,
+            Pitch.C3, Pitch.CSharp3, Pitch.D3, Pitch.DSharp3, Pitch.E3, Pitch.F3, Pitch.FSharp3, Pitch.G3, Pitch.GSharp3, Pitch.A3, Pitch.Asharp3, Pitch.B3,
+            Pitch.C4, Pitch.CSharp4, Pitch.D4, Pitch.DSharp4, Pitch.E4, Pitch.F4, Pitch.FSharp4, Pitch.G4, Pitch.GSharp4, Pitch.A4, Pitch.Asharp4, Pitch.B4,
+            Pitch.C5, Pitch.CSharp5, Pitch.D5, Pitch.DSharp5, Pitch.E5, Pitch.F5, Pitch.FSharp5, Pitch.G5, Pitch.GSharp5, Pitch.A5, Pitch.Asharp5, Pitch.B5);
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {

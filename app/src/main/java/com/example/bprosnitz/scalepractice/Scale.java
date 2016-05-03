@@ -10,7 +10,7 @@ import com.leff.midi.event.meta.TimeSignature;
 import java.util.ArrayList;
 
 public class Scale {
-    private int[] Notes;
+    int[] Notes;
 
     public Scale(int[] notes) {
         this.Notes = notes;

@@ -1,18 +1,32 @@
 package com.example.bprosnitz.scalepractice;
 
-/**
- * Created by bprosnitz on 4/16/16.
- */
 public class Exercise {
-    public String name;
-    public Scale scale;
+    Pitch root;
+    Scale scale;
 
-    public Exercise(String name, Scale scale) {
-        this.name = name;
+    public Exercise(Scale scale) {
+        this.root = Pitch.C2;
+        this.scale = scale;
+    }
+
+    public Exercise(Pitch root, Scale scale) {
+        this.root = root;
         this.scale = scale;
     }
 
     public String toString() {
-        return this.name;
+        StringBuilder sb = new StringBuilder();
+        int base = scale.Notes[0];
+        int i = 0;
+        for (int note : scale.Notes) {
+            if (i > 0) {
+                sb.append(" ");
+            }
+            note = note - base;
+            Pitch pitch = root.plus(note);
+            sb.append(pitch.letter());
+            i++;
+        }
+        return sb.toString();
     }
 }
